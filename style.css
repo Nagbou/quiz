@@ -1,0 +1,172 @@
+body {
+    background-image: url(Bg-01.jpg);
+}
+
+#timer {
+    background-color: rgb(216, 27, 20);
+    color: white;
+    position: absolute;
+    top: 72%;
+    left: 20%;
+    z-index: -1;
+    display: flex;
+    height: 13vh;
+    width: 16vh;
+    font-size: 3rem;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    border-radius: 5%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 8vh;
+    padding-top: 3%;
+    padding-left: 3%;
+    height: 90vh;
+    width: 100vh;
+}
+
+@keyframes noddingBtn {
+    0% {
+        left: 73%;
+    }
+
+    50% {
+        left: 72.2%;
+    }
+
+    100% {
+        left: 73%;
+    }
+}
+
+
+
+.fa-caret-right {
+    color: rgb(68, 240, 68);
+    font-size: 50px;
+    position: absolute;
+    top: 86%;
+    left: 73%;
+}
+
+.fa-caret-right:hover {
+    cursor: pointer;
+    animation: noddingBtn 1s forwards;
+}
+
+.fa-caret-right:hover::after {
+    content: "Next";
+    font-size: 1rem;
+}
+
+#question {
+    margin-left: 5%;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+@keyframes sharkingLine {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+hr {
+    margin-bottom: 8%;
+    margin-left: 5%;
+    max-width: 80%;
+    animation: sharkingLine 5s forwards;
+}
+
+ol {
+    list-style-type: upper-alpha;
+}
+
+.answers {
+    display: inline-block;
+    max-width: 40%;
+    min-width: 40%;
+}
+
+.answer {
+    background-color: rgb(235, 235, 235);
+    margin-bottom: 20%;
+    width: 250%;
+    padding: 10% 7% 15% 7%;
+    font-size: 120%;
+}
+
+.answer:hover {
+    cursor: pointer;
+    background-color: rgb(228, 226, 128);
+}
+
+.correct_answer {
+    background-color: rgb(186, 247, 186);
+    color: rgb(1, 73, 1);
+    border: 1px solid rgb(102, 179, 102);
+}
+
+.correct_answer:hover {
+    cursor: auto;
+    background-color: rgb(186, 247, 186);
+}
+
+.wrong_answer {
+    background-color: rgb(252, 181, 181);
+    color: rgb(116, 12, 12);
+    border: 1px solid rgb(252, 115, 115);
+}
+
+.wrong_answer:hover {
+    cursor: auto;
+    background-color: rgb(252, 181, 181);
+}
+
+.finished {
+    background-color: rgb(238, 239, 252);
+    height: 45%;
+    width: 65%;
+    position: absolute;
+    top: 20%;
+    left: 22%;
+    z-index: 2000;
+    padding: 5%;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.restart {
+    color: white;
+    font-size: 2rem;
+    padding: 1% 2%;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color: blueviolet;
+    border: 1px rgb(241, 135, 218);
+}
+
+.restart:hover {
+    background-color: rgb(174, 4, 180);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.display_none {
+    display: none;
+}
